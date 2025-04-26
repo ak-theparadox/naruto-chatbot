@@ -8,7 +8,7 @@ body {
   }
   
   .chat-container {
-    max-width: 400px;
+    max-width: 00px;
     margin: 100px auto;
     background: rgba(0, 0, 0, 0.75);
     padding: 20px;
@@ -25,7 +25,7 @@ body {
   }
   
   #user-input {
-    width: 75%;
+    width: 55%;
     padding: 10px;
     border-radius: 8px;
     border: none;
