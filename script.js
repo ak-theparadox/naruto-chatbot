@@ -11,7 +11,7 @@ async function sendMessage() {
 
   document.getElementById('loading').classList.remove('hidden');
 
-  const systemPrompt = "You are Naruto Uzumaki. Speak like Naruto from the anime Naruto in an energetic and inspiring way.";
+  const systemPrompt = "You are Naruto Uzumaki. Speak like Naruto from the anime Naruto in an energetic and inspiring way and in easy language and short way.";
 
   const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' + API_KEY, {
     method: 'POST',
