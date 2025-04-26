@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('https://anime.goodfon.com/senen/wallpaper-naruto-ninja-uzumaki-red-eyes.html') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .chat-container {
+    max-width: 600px;
+    margin: 100px auto;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px orange;
+  }
+  
+  #chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid orange;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #user-input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: orange;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Rasengan Loader */
+  #loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+  }
+  
+  .rasengan {
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(0, 191, 255, 0.5);
+    border-top: 5px solid #00bfff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, pulse 1.5s ease-in-out infinite;
+    box-shadow: 0 0 15px #00bfff, 0 0 30px #00bfff;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 10px #00bfff; }
+    50% { box-shadow: 0 0 25px #00bfff; }
+  }
+  
+  .hidden {
+    display: none;
+  }
