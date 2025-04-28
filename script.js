@@ -1,5 +1,10 @@
 const API_KEY = 'AIzaSyCuGYE3gfHhOZzVGMAubCVwATtpua3mxF4';
 const chatBox = document.getElementById('chat-box');
+// Preload available voices
+let voices = [];
+speechSynthesis.onvoiceschanged = () => {
+  voices = speechSynthesis.getVoices();
+};
 
 async function sendMessage() {
   const inputField = document.getElementById('user-input');
