@@ -31,4 +31,30 @@ async function sendMessage() {
 
   chatBox.innerHTML += `<p><strong>Naruto:</strong> ${reply}</p>`;
   chatBox.scrollTop = chatBox.scrollHeight;
+  speak(reply);
 }
+function speak(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  if (voices.length === 0) {
+    voices = speechSynthesis.getVoices();
+  }
+
+  // Try to pick a Naruto-like voice
+  let narutoVoice = voices.find(voice =>
+    (voice.name.toLowerCase().includes('google') || voice.name.toLowerCase().includes('english')) &&
+    voice.lang.startsWith('en')
+  );
+
+  // Fallback: pick first English voice if none found
+  if (!narutoVoice) {
+    narutoVoice = voices.find(voice => voice.lang.startsWith('en')) || voices[0];
+  }
+
+  utterance.voice = narutoVoice;
+  utterance.pitch = 1.5; // Energetic pitch
+  utterance.rate = 1;    // Normal speaking speed
+
+  speechSynthesis.speak(utterance);
+}
+
